@@ -35,6 +35,7 @@ html {
 
 body {
     width: 100%;
+    overflow-x: hidden;
 }
 
 a {
@@ -703,6 +704,7 @@ h2 {
 
 .newsletter-section {
     margin-top: 5rem;
+    position: relative;
 }
 
 .newsletter-wrapper {
@@ -712,6 +714,7 @@ h2 {
     display: flex;
     border-radius: 20px;
     position: relative;
+    overflow: hidden;
 }
 
 .newsletter-wrapper img {
@@ -724,9 +727,38 @@ h2 {
     width: 100%;
 }
 
+.newsletter-blob-bot {
+    width: 100%;
+    bottom: 0;
+}
+
+.newsletter-blob-ellipse-1 {
+    width: 10%;
+    left: 2rem;
+    top: 1.3rem;
+}
+
+.newsletter-blob-ellipse-2 {
+    width: 4%;
+    right: 6rem;
+    top: 2.7rem;
+}
+
+.newsletter-blob-ellipse-3 {
+    width: 4%;
+    right: 50%;
+    bottom: 4rem;
+}
+
+.newsletter-blob-ellipse-4 {
+    width: 2.3%;
+    left: 42%;
+    bottom: 2rem;
+}
+
 .newsletter-content {
-    padding: 4rem;
-    flex: 1;
+    padding: 5rem;
+    flex: 0.7;
     z-index: 2;
 }
 
@@ -759,6 +791,7 @@ h2 {
 
 .newsletter-input input[type="text"]::placeholder {
     font-style: italic;
+    font-size: 12px;
 }
 
 .newsletter-input label {
@@ -778,4 +811,84 @@ h2 {
 .newsletter-input label:hover {
     background-color: white;
     color: black;
+}
+
+.newsletter-bg-extend {
+    height: 20rem;
+    width: 100vw;
+    position: absolute;
+    background-color: var(--green-light);
+    z-index: -1;
+    top: 50%;
+    left: 0;
+}
+
+.footer-main-wrapper {
+    background-color: var(--green-light);
+    padding: 2rem var(--main-padding);
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-main-sec {
+    color: var(--dark-gray);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.footer-main-sec h6 {
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+
+.footer-main-sec a {
+    color: inherit;
+}
+
+.footer-reviews-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.footer-reviews-wrapper p {
+    padding: 0.2rem 0.8rem;
+    border: 1px solid var(--dark-gray);
+    border-radius: 2rem;
+}
+
+.footer-sub-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem var(--main-padding);
+}
+
+.footer-sub-main {
+    display: flex;
+    gap: 1rem;
+    color: var(--dark-gray);
+}
+
+.footer-sub-main h6 {
+    font-weight: 600;
+}
+
+.footer-sub-main a {
+    color: inherit;
+}
+
+.footer-sub-socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-sub-socials p {
+    font-weight: 600;
+    color: var(--dark-gray);
+    margin-right: 0.5rem;
+}
+
+.footer-sub-socials a img {
+    height: 20px;
 }
