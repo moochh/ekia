@@ -90,7 +90,7 @@ a {
 }
 
 .hero-section-main {
-    width: 35%;
+    width: 40%;
     padding-left: 5rem;
     padding-bottom: 1.5rem;
 }
@@ -633,6 +633,149 @@ h2 {
 }
 
 .button-2:hover {
+    background-color: white;
+    color: black;
+}
+
+.categories-section {
+    margin-top: 5rem;
+}
+
+.category-product-wrapper {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.category-product {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    transition: var(--transition);
+    width: 20%;
+}
+
+.category-product * {
+    transition: var(--transition);
+}
+
+.category-product img {
+    width: 100%;
+}
+.category-product h6 {
+    font-weight: 600;
+}
+
+.category-product p {
+    color: var(--dark-gray);
+    font-weight: 500;
+}
+
+.category-product:hover > * {
+    transform: translateY(-1.5rem);
+}
+
+.category-product:hover > p,
+.category-product:hover > h6 {
+    margin-left: 1.5rem;
+}
+
+.category-product:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.button-3 {
+    border: 1px solid var(--gray);
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    color: var(--gray);
+    transition: var(--transition);
+}
+
+.button-3:hover {
+    color: white;
+    background-color: var(--green);
+    border: 1px solid var(--green);
+}
+
+.newsletter-section {
+    margin-top: 5rem;
+}
+
+.newsletter-wrapper {
+    margin: 0 7rem;
+    background-image: linear-gradient(to bottom right, #AFC798, #8EAB71);
+    color: white;
+    display: flex;
+    border-radius: 20px;
+    position: relative;
+}
+
+.newsletter-wrapper img {
+    position: absolute;
+    z-index: 0;
+}
+
+.newsletter-blob-top {
+    top: 0;
+    width: 100%;
+}
+
+.newsletter-content {
+    padding: 4rem;
+    flex: 1;
+    z-index: 2;
+}
+
+.newsletter-content h3 {
+    font-size: 27px;
+}
+
+.newsletter-input {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    z-index: 2;
+}
+
+.newsletter-input * {
+    height: fit-content;
+}
+
+.newsletter-input input[type="text"] {
+    border: 0;
+    padding: 0.5rem 1.2rem;
+    border-radius: 10px;
+    width: 60%;
+}
+
+.newsletter-input input[type="text"]:focus {
+    outline: none;
+}
+
+.newsletter-input input[type="text"]::placeholder {
+    font-style: italic;
+}
+
+.newsletter-input label {
+    padding: 0.5rem 1.2rem;
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.newsletter-input input[type="radio"] {
+    display: none;
+}
+
+.newsletter-input label:hover {
     background-color: white;
     color: black;
 }
