@@ -885,6 +885,7 @@ h2 {
 
 .footer-sub-main a {
     color: inherit;
+    font-size: 12px;
 }
 
 .footer-sub-socials {
@@ -896,8 +897,9 @@ h2 {
     font-weight: 600;
     color: var(--dark-gray);
     margin-right: 0.5rem;
+    font-size: 12px;
 }
 
 .footer-sub-socials a img {
-    height: 20px;
+    height: 15px;
 }
