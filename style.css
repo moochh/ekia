@@ -365,7 +365,7 @@ h2 {
 .bundle-content-img-wrapper {
     width: 50%;
     overflow: hidden;
-    background-image: url(images/Bundles/1/main.png);
+    background-image: url(Images/Bundles/1/main.png);
     border-radius: 15px;
     background-size: cover;
 }
@@ -840,10 +840,18 @@ h2 {
 .footer-main-sec h6 {
     font-weight: 600;
     margin-bottom: 1.2rem;
+    font-size: 12px;
 }
 
 .footer-main-sec a {
     color: inherit;
+    font-size: 12px;
+    margin: 0.3rem 0;
+    width: fit-content;
+}
+
+.footer-main-sec a:hover {
+    text-decoration: underline;
 }
 
 .footer-reviews-wrapper {
@@ -856,6 +864,7 @@ h2 {
     padding: 0.2rem 0.8rem;
     border: 1px solid var(--dark-gray);
     border-radius: 2rem;
+    font-size: 12px;
 }
 
 .footer-sub-wrapper {
