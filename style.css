@@ -4,6 +4,8 @@
     --dark-gray: #898989;
     --gray: #C6C6C6;
     --light-gray: #ECECEC;
+    --main-padding: 7rem;
+    --transition: 0.3s ease;
 }
 
 * {
@@ -244,7 +246,7 @@ a {
 }
 
 section {
-    padding: 2rem 5rem;
+    padding: 2rem var(--main-padding);
 }
 
 .brand-section {
@@ -293,7 +295,7 @@ section {
     padding-bottom: 5rem;
 }
 
-.choose-us-content h2 {
+h2 {
     font-size: 40px;
     font-weight: 700;
 }
@@ -492,4 +494,145 @@ section {
     color: var(--green);
     font-size: 18px;
     transform: translateX(-35%);
+}
+.sale-section {
+    padding-left: 0;
+    margin-top: 5rem;
+}
+
+.sale-wrapper {
+    width: 100%;
+    display: flex;
+}
+
+.sale-main {
+    background-color: var(--green-light);
+    padding: 2.5rem;
+    padding-left: var(--main-padding);
+    flex: 2;
+}
+
+.sale-main h2 span {
+    font-size: inherit;
+    color: var(--green);
+}
+
+.sale-main p {
+    margin: 1rem 0;
+}
+
+.sale-main a {
+    margin-top: 3.5rem;
+}
+
+.sale-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    transition: 0.3s ease;
+    flex: 1;
+}
+
+.sale-product img {
+    width: 100%;
+}
+
+.sale-product h6 {
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.sale-product h5 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.sale-product:hover {
+    background-color: var(--green-light);
+}
+
+.featured-section {
+    margin-top: 3rem;
+}
+
+.featured-wrapper {
+   display: flex; 
+   background-color: var(--green);
+   border-radius: 15px;
+   position: relative;
+   margin-top: 1rem;
+}
+
+.featured-quote {
+    color: white;
+    width: 50%;
+    position: relative;
+    padding: 2rem;
+}
+
+.featured-quote h2,
+.featured-quote span {
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 100px;
+    bottom: 3%;
+    left: 3%;
+    position: absolute;
+}
+
+.featured-quote h2 {
+    z-index: 0;
+}
+
+.featured-quote span {
+    z-index: 3;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
+.featured-quote img {
+    height: 120%;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 5%;
+}
+
+.featured-content {
+    padding: 4rem;
+    padding-right: 5rem;
+    color: white;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured-content h5 {
+    font-size: 27px;
+
+}
+
+.featured-content a {
+    margin-top: 3.5rem;
+}
+
+.button-2 {
+    padding: 0.6rem 1.8rem;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    display: inline-block;
+    width: fit-content;
+    font-size: 14px;
+    font-weight: 400;
+    transition: 0.3s ease;
+    color: white;
+}
+
+.button-2:hover {
+    background-color: white;
+    color: black;
 }
