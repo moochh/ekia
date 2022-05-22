@@ -140,8 +140,7 @@ nav {
     width: 100%;
     display: flex;
     z-index: 7;
-    position: absolute;
-    transform: translateY(-100vh);
+    position: relative;
 }
 
 .hero-section-sec {
@@ -356,7 +355,6 @@ section {
     width: 100%;
     justify-content: center;
     background-color: var(--green-light);
-    margin-top: 100vh;
 }
 
 .brand-section-wrapper {
@@ -830,6 +828,7 @@ h2 {
 .newsletter-section {
     margin-top: 5rem;
     position: relative;
+    z-index: 5;
 }
 
 .newsletter-wrapper {
@@ -946,6 +945,11 @@ h2 {
     z-index: -1;
     top: 50%;
     left: 0;
+}
+
+footer {
+    z-index: 6;
+    position: relative;
 }
 
 .footer-main-wrapper {
