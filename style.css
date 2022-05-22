@@ -654,6 +654,7 @@ h2 {
     border-radius: 15px;
     transition: var(--transition);
     width: 20%;
+    position: relative;
 }
 
 .category-product * {
@@ -681,8 +682,31 @@ h2 {
     margin-left: 1.5rem;
 }
 
+.category-product:hover > .product-heart,
+.category-product:hover > .product-cart {
+    opacity: 1;
+}
+
 .category-product:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-heart,
+.product-cart {
+    position: absolute;
+    height: 7%;
+    right: -37%;
+    transform: translateY(1.5rem);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.product-heart {
+    top: 14%;
+}
+
+.product-cart {
+    bottom: 0;
 }
 
 .button-3 {
