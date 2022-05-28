@@ -458,10 +458,11 @@ h2 {
 
 .bundles-slideshow-wrapper {
   margin-top: 1rem;
+  position: relative;
 }
 
 .bundle-main {
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 
@@ -482,7 +483,13 @@ h2 {
 
 .bundle-content-main {
   flex: 1;
-  height: 100%;
+  height: 490px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bundle-content-main-container {
   display: flex;
   flex-direction: column;
 }
@@ -606,6 +613,82 @@ h2 {
   font-size: 18px;
   transform: translateX(-35%);
 }
+
+.label-left, 
+.label-right {
+  display: none;
+}
+
+.label-right {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translate(50%, -50%);
+  right: 0;
+}
+
+.label-left {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
+  left: 0;
+}
+
+.bundle-default-label {
+  cursor: default;
+}
+
+/* <-- BUNDLE 1 --> */
+
+#bundle-1:checked ~ .bundle-main-1 {
+  display: flex;
+}
+
+#bundle-1:checked ~ #bundle-1-default {
+  display: inline-block;
+}
+
+#bundle-1:checked ~ #bundle-2-next-label {
+  display: inline-block;
+}
+
+/* <-- BUNDLE 2 --> */
+
+#bundle-2:checked ~ .bundle-main-2 {
+  display: flex;
+}
+
+#bundle-2:checked ~ #bundle-1-previous-label {
+  display: inline-block;
+}
+
+#bundle-2:checked ~ #bundle-3-next-label {
+  display: inline-block;
+}
+
+
+/* <-- BUNDLE 3 --> */
+
+#bundle-3:checked ~ .bundle-main-3 {
+  display: flex;
+}
+
+#bundle-3:checked ~ #bundle-2-previous-label {
+  display: inline-block;
+}
+
+#bundle-3:checked ~ #bundle-3-last {
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
 .sale-section {
   padding-left: 0;
   margin-top: 5rem;
