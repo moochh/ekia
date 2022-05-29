@@ -1,3 +1,8 @@
+<?php
+  include('functions.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 
-  <title>Ekia baby</title>
+  <title>Home | EKIA.</title>
 </head>
 <body>
   <nav>
@@ -478,48 +483,212 @@
   </section>
 
   <section class="categories-section">
+    <span id="home-categories-target"></span>
     <div class="label">
         <div class="hori-line">&nbsp;</div>
         <p>CATEGORIES</p>
     </div>
-    <div class="categories-wrapper">
+    <div class="categories-wrapper" id="categories-wrapper">
       <div class="category-product-wrapper">
         <div class="category-product">
-          <a href="product-desc-1.html">
-            <img src="Images/Categories/living-room-1.png">
+          <a href="product-desc-1.html" class="category-product-link-main">
+            <img src="Images/Categories/living-room-1.png" class="category-product-img-main">
             <h6>Product Name</h6>
             <p>$899.00</p>
-            <img src="Images/Icons/heart.svg" class="product-heart">
-            <img src="Images/Icons/add-to-cart.svg" class="product-cart">
           </a>
+          <?php
+            $query = "SELECT * FROM favorites WHERE product_code = '001'";
+            $faves_result = mysqli_query($db, $query); 
+            
+            if($faves_result) { if(mysqli_num_rows($faves_result) > 0){ ?>
+            <form action="index.php#home-categories-target" method="POST" class="added">
+              <input type="text" name="click" value="0" hidden>
+              <input type="text" value="001" name="product_code" hidden>
+              <button type="submit" name="faves"><img src="Images/Icons/added-faves.svg" class="added"></button>
+              <span></span>
+            </form>
+            
+            <?php } else { ?>
+              <form action="index.php#home-categories-target" method="POST" class="product-heart">
+                <input type="text" name="click" value="1" hidden>   
+                <input type="text" value="001" name="product_code" hidden>
+                <button type="submit" name="faves"><img src="Images/Icons/heart.svg" class="product-heart"></button>
+                <span></span>
+              </form>
+            <?php } } ?>
+
+          <?php
+            $query = "SELECT * FROM cart WHERE product_code = '001'";
+            $cart_result = mysqli_query($db, $query); 
+            
+            if($cart_result) { if(mysqli_num_rows($cart_result) > 0){ ?>
+            <form action="index.php#home-categories-target" method="POST" class="product-cart">
+              <input type="text" name="click" value="0" hidden>
+              <input type="text" value="001" name="product_code" hidden>
+              <button type="submit" name="cart"><img src="Images/Icons/added-cart.svg" class="product-cart"></button>
+              <span></span>
+            </form>
+
+            <?php } else { ?>
+              <form action="index.php#home-categories-target" method="POST" class="product-cart">
+                <input type="text" name="click" value="1" hidden>   
+                <input type="text" value="001" name="product_code" hidden>
+                <button type="submit" name="cart"><img src="Images/Icons/add-to-cart.svg" class="product-cart"></button>
+                <span></span>
+              </form>
+            <?php } } ?>
         </div>
+
         <div class="category-product">
-          <a href="product-desc-1.html">
-            <img src="Images/Categories/living-room-2.png">
+          <a href="product-desc-1.html" class="category-product-link-main">
+            <img src="Images/Categories/living-room-2.png" class="category-product-img-main">
             <h6>Product Name</h6>
             <p>$899.00</p>
-            <img src="Images/Icons/heart.svg" class="product-heart">
-            <img src="Images/Icons/add-to-cart.svg" class="product-cart">
           </a>
+          <?php
+            $query = "SELECT * FROM favorites WHERE product_code = '002'";
+            $faves_result = mysqli_query($db, $query); 
+            
+            if($faves_result) { if(mysqli_num_rows($faves_result) > 0){ ?>
+            <form action="index.php#home-categories-target" method="POST" class="product-heart">
+              <input type="text" name="click" value="0" hidden>
+              <input type="text" value="002" name="product_code" hidden>
+              <button type="submit" name="faves"><img src="Images/Icons/added-faves.svg" class="product-heart"></button>
+              <span></span>
+            </form>
+            
+            <?php } else { ?>
+              <form action="index.php#home-categories-target" method="POST" class="product-heart">
+                <input type="text" name="click" value="1" hidden>   
+                <input type="text" value="002" name="product_code" hidden>
+                <button type="submit" name="faves"><img src="Images/Icons/heart.svg" class="product-heart"></button>
+                <span></span>
+              </form>
+            <?php } } ?>
+
+          <?php
+            $query = "SELECT * FROM cart WHERE product_code = '002'";
+            $cart_result = mysqli_query($db, $query); 
+            
+            if($cart_result) { if(mysqli_num_rows($cart_result) > 0){ ?>
+            <form action="index.php#home-categories-target" method="POST" class="product-cart">
+              <input type="text" name="click" value="0" hidden>
+              <input type="text" value="002" name="product_code" hidden>
+              <button type="submit" name="cart"><img src="Images/Icons/added-cart.svg" class="product-cart"></button>
+              <span></span>
+            </form>
+
+            <?php } else { ?>
+              <form action="index.php#home-categories-target" method="POST" class="product-cart">
+                <input type="text" name="click" value="1" hidden>   
+                <input type="text" value="002" name="product_code" hidden>
+                <button type="submit" name="cart"><img src="Images/Icons/add-to-cart.svg" class="product-cart"></button>
+                <span></span>
+              </form>
+            <?php } } ?>
         </div>
+
         <div class="category-product">
-          <a href="product-desc-1.html">
-            <img src="Images/Categories/living-room-3.png">
+          <a href="product-desc-1.html" class="category-product-link-main">
+            <img src="Images/Categories/living-room-3.png" class="category-product-img-main">
             <h6>Product Name</h6>
             <p>$899.00</p>
-            <img src="Images/Icons/heart.svg" class="product-heart">
-            <img src="Images/Icons/add-to-cart.svg" class="product-cart">
           </a>
+          <?php
+            $query = "SELECT * FROM favorites WHERE product_code = '003'";
+            $faves_result = mysqli_query($db, $query); 
+            
+            if($faves_result) { if(mysqli_num_rows($faves_result) > 0){ ?>
+            <form action="index.php#home-categories-target" method="POST" class="product-heart">
+              <input type="text" name="click" value="0" hidden>
+              <input type="text" value="003" name="product_code" hidden>
+              <button type="submit" name="faves"><img src="Images/Icons/added-faves.svg" class="product-heart"></button>
+              <span></span>
+            </form>
+            
+            <?php } else { ?>
+              <form action="index.php#home-categories-target" method="POST" class="product-heart">
+                <input type="text" name="click" value="1" hidden>   
+                <input type="text" value="003" name="product_code" hidden>
+                <button type="submit" name="faves"><img src="Images/Icons/heart.svg" class="product-heart"></button>
+                <span></span>
+              </form>
+            <?php } } ?>
+
+          <?php
+            $query = "SELECT * FROM cart WHERE product_code = '003'";
+            $cart_result = mysqli_query($db, $query); 
+            
+            if($cart_result) { if(mysqli_num_rows($cart_result) > 0){ ?>
+            <form action="index.php#home-categories-target" method="POST" class="product-cart">
+              <input type="text" name="click" value="0" hidden>
+              <input type="text" value="003" name="product_code" hidden>
+              <button type="submit" name="cart"><img src="Images/Icons/added-cart.svg" class="product-cart"></button>
+              <span></span>
+            </form>
+
+            <?php } else { ?>
+              <form action="index.php#home-categories-target" method="POST" class="product-cart">
+                <input type="text" name="click" value="1" hidden>   
+                <input type="text" value="003" name="product_code" hidden>
+                <button type="submit" name="cart"><img src="Images/Icons/add-to-cart.svg" class="product-cart"></button>
+                <span></span>
+              </form>
+            <?php } } ?>
         </div>
+
         <div class="category-product">
-          <a href="product-desc-1.html">
-            <img src="Images/Categories/living-room-4.png">
+          <a href="product-desc-1.html" class="category-product-link-main">
+            <img src="Images/Categories/living-room-4.png" class="category-product-img-main">
             <h6>Product Name</h6>
             <p>$899.00</p>
-            <img src="Images/Icons/heart.svg" class="product-heart">
-            <img src="Images/Icons/add-to-cart.svg" class="product-cart">
           </a>
+          <?php
+            $query = "SELECT * FROM favorites WHERE product_code = '004'";
+            $faves_result = mysqli_query($db, $query); 
+            
+            if($faves_result) { if(mysqli_num_rows($faves_result) > 0){ ?>
+            <form action="index.php#home-categories-target" method="POST" class="product-heart">
+              <input type="text" name="click" value="0" hidden>
+              <input type="text" value="004" name="product_code" hidden>
+              <button type="submit" name="faves"><img src="Images/Icons/added-faves.svg" class="product-heart"></button>
+              <span></span>
+            </form>
+            
+            <?php } else { ?>
+              <form action="index.php#home-categories-target" method="POST" class="product-heart">
+                <input type="text" name="click" value="1" hidden>   
+                <input type="text" value="004" name="product_code" hidden>
+                <button type="submit" name="faves"><img src="Images/Icons/heart.svg" class="product-heart"></button>
+                <span></span>
+              </form>
+            <?php } } ?>
+
+          <?php
+            $query = "SELECT * FROM cart WHERE product_code = '004'";
+            $cart_result = mysqli_query($db, $query); 
+            
+            if($cart_result) { if(mysqli_num_rows($cart_result) > 0){ ?>
+            <form action="index.php#home-categories-target" method="POST" class="product-cart">
+              <input type="text" name="click" value="0" hidden>
+              <input type="text" value="004" name="product_code" hidden>
+              <button type="submit" name="cart"><img src="Images/Icons/added-cart.svg" class="product-cart"></button>
+              <span></span>
+            </form>
+
+            <?php } else { ?>
+              <form action="index.php#home-categories-target" method="POST" class="product-cart">
+                <input type="text" name="click" value="1" hidden>   
+                <input type="text" value="004" name="product_code" hidden>
+                <button type="submit" name="cart"><img src="Images/Icons/add-to-cart.svg" class="product-cart"></button>
+                <span></span>
+              </form>
+            <?php } } ?>
         </div>
+
+
+        
+        
         <a href="" class="button-3">Shop All ></a>
       </div>
     </div>
